@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import commander from 'commander';
+import genDiff from '..';
 
 const program = require('commander');
 
@@ -9,6 +10,8 @@ program
   .description('Compares two configuration files and shows a difference.')
   .option('-f, --format [type]', 'Output format')
   .arguments('<firstConfig> <secondConfig>')
-  .action((filepath1, filepath2) => {});
+  .action((filepath1, filepath2) => {
+  	console.log(genDiff(filepath1,filepath2));
+  });
 
   program.parse(process.argv);

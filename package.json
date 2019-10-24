@@ -2,6 +2,7 @@
   "name": "frontend-project-alexdev",
   "version": "1.0.2",
   "description": "Second project",
+  "main": "dist/index.js",
   "bin": {
     "gendiff": "dist/bin/gendiff.js"
   },
@@ -28,6 +29,9 @@
     "@babel/core": "^7.6.4",
     "@babel/node": "^7.6.3",
     "@babel/preset-env": "^7.6.3",
-    "commander": "^3.0.2"
+    "commander": "^3.0.2",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.15",
+    "path": "^0.12.7"
   }
 }
