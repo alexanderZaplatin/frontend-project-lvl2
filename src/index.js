@@ -16,7 +16,7 @@ const genDiff = (filePath1, filePath2) => {
   const delKeys = keysFirst.filter((key) => !keysSecond.includes(key));
   const delData = delKeys.reduce((acc, elem) => {
     const str = data1[elem];
-    return [...acc, `\n - ${elem}:${str}`];
+    return [...acc, ` - ${elem}:${str}`];
   }, []);
 
  	const result = keysSecond.reduce((acc, elem) => {
@@ -26,18 +26,18 @@ const genDiff = (filePath1, filePath2) => {
  		}
     if(keysFirst.includes(elem) && (data2[elem] === data1[elem])) {
       const str = data2[elem];
-      return [...acc, `\n   ${elem}:${str}`];
+      return [...acc, `   ${elem}:${str}`];
     }
      if(!keysFirst.includes(elem)) {
       const str = data2[elem];
-      return [...acc, `\n + ${elem}:${str}`];
+      return [...acc, ` + ${elem}:${str}`];
     }
     
  		return acc;
  	}, [])
 
-   const total = [result,delData]
-return total.join('');
+   const total = [...result,...delData]
+return total.join('\n');
  }; 
 
  export default genDiff;
