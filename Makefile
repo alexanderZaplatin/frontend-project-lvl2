@@ -1,3 +1,7 @@
+
+install: 
+	npm install
+
 prepublish:
 	npm publish --dry-run
 
