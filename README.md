@@ -12,3 +12,6 @@
 
 # Installation and genDiff for YMAL
 [![asciicast](https://asciinema.org/a/hDZTFfJZnZPyg0cyMX2MYODKD.svg)](https://asciinema.org/a/hDZTFfJZnZPyg0cyMX2MYODKD)
+
+# Installation and genDiff for INI
+[![asciicast](https://asciinema.org/a/bF2J2MI3hx3IeZE9u9FZ1xtWK.svg)](https://asciinema.org/a/bF2J2MI3hx3IeZE9u9FZ1xtWK)
