@@ -8,3 +8,7 @@
 
 # Installation and genDiff for JSON
 [![asciicast](https://asciinema.org/a/lCI4LBTLxMWSKBmMgOwydtrOp.svg)](https://asciinema.org/a/lCI4LBTLxMWSKBmMgOwydtrOp)
+
+
+# Installation and genDiff for YMAL
+[![asciicast](https://asciinema.org/a/hDZTFfJZnZPyg0cyMX2MYODKD.svg)](https://asciinema.org/a/hDZTFfJZnZPyg0cyMX2MYODKD)
