@@ -12,13 +12,13 @@
 Поддержка разных форматов
 Генерация отчета в виде plain text, pretty и json
 Пример использования:
-
+```sh
 $ gendiff --format plain first-config.ini second-config.ini
 Setting "common.setting2" deleted.
 Setting "common.setting4" added with value "blah blah".
 Setting "group1.baz" changed from "bas" to "bars".
 Section "group2" deleted.
-
+```
 
 # Installation and genDiff for JSON
 [![asciicast](https://asciinema.org/a/lCI4LBTLxMWSKBmMgOwydtrOp.svg)](https://asciinema.org/a/lCI4LBTLxMWSKBmMgOwydtrOp)
