@@ -21,18 +21,18 @@ const render = (ast, level = 0) => {
 			return `${repeat(4)}${data.key}: ${render(data.children, level + 1)}`;
 		}
 		if (level === 2) {
-			return `${repeat(10)}${sign(data.action)} ${data.key}: ${data.value}`;
+			return `${repeat(10)}${sign(data.action)} ${data.key}: ${data.valueAfter}`;
 		}
 		if (data.action === 'updated') {
 			return `${repeat(6)}- ${data.key}: ${stringify(data.valueBefore)}\n${repeat(6)}+ ${data.key}: ${stringify(data.valueAfter)}`;
 		}
 		if (level > 0) {
-			return `${repeat(6)}${sign(data.action)} ${data.key}: ${stringify(data.value, level)}`;
+			return `${repeat(6)}${sign(data.action)} ${data.key}: ${stringify(data.valueAfter, level)}`;
 		}
 		if (level === 0) {
-			return `${repeat(2)}${sign(data.action)} ${data.key}: ${stringify(data.value, level)}`;
+			return `${repeat(2)}${sign(data.action)} ${data.key}: ${stringify(data.valueAfter, level)}`;
 		}
-		return `${repeat(10)}${sign(data.action)}${data.key}: ${stringify(data.value, level)}`;
+		return `${repeat(10)}${sign(data.action)}${data.key}: ${stringify(data.valueAfter, level)}`;
 	});
 	return `{\n${res.join('\n')}\n${space(level)}}`;
 };

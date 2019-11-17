@@ -15,21 +15,21 @@ const astBuilder = (fileBefore, fileAfter) => {
 		if (!_.has(key, fileAfter)) {
 			return{
 				key,
-				value: fileBefore[key],
+				valueAfter: fileBefore[key],
 				action: 'deleted',
 			}
 		}
 		if (!_.has(key, fileBefore)) {
 			return {
 				key,
-				value: fileAfter[key],
+				valueAfter: fileAfter[key],
 				action: 'added',
 			}
 		}
 		if (fileBefore[key] === fileAfter[key]) {
 			return {
 				key,
-				value: fileAfter[key],
+				valueAfter: fileAfter[key],
 				action: 'nothing',
 			}
 		}
