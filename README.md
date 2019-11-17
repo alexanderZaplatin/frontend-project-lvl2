@@ -21,3 +21,6 @@
 
 # Installation and genPlainRender
 [![asciicast](https://asciinema.org/a/VnvkzAN9iZXjtDejykGZXxjdq.svg)](https://asciinema.org/a/VnvkzAN9iZXjtDejykGZXxjdq)
+
+# Installation and genJsonRender
+[![asciicast](https://asciinema.org/a/rcBM3L7jPiLPgpLMZlJx4aKqG.svg)](https://asciinema.org/a/rcBM3L7jPiLPgpLMZlJx4aKqG)
