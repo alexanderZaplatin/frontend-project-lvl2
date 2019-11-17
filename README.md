@@ -9,9 +9,9 @@
 
 Возможности утилиты:
 
-Поддержка разных форматов
-Генерация отчета в виде plain text, pretty и json
-Пример использования:
+- Поддержка разных форматов
+- Генерация отчета в виде plain text, pretty и json
+- Пример использования:
 ```sh
 $ gendiff --format plain first-config.ini second-config.ini
 Setting "common.setting2" deleted.
