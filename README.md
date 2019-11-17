@@ -18,3 +18,6 @@
 
 # Installation and genDiffBigData
 [![asciicast](https://asciinema.org/a/VZo77xF4EMPBKSI4oUOZlGUv5.svg)](https://asciinema.org/a/VZo77xF4EMPBKSI4oUOZlGUv5)
+
+# Installation and genPlainRender
+[![asciicast](https://asciinema.org/a/VnvkzAN9iZXjtDejykGZXxjdq.svg)](https://asciinema.org/a/VnvkzAN9iZXjtDejykGZXxjdq)
