@@ -10,6 +10,7 @@ test.each`
 fileFormat 	| formatOut 	| fileName
 ${'.ini'} 	| ${'plain'} 	| ${'plainResult.txt'}
 ${'.json'} 	| ${'nested'} | ${'nestedResult.txt'}
+${'.yml'} 	| ${'json'} 	| ${'jsonResult.txt'}
 `('gendiff', ({ fileFormat, formatOut, fileName }) => {
 	const olD = getPathBefore(fileFormat);
 	const neW = getPathAfter(fileFormat);
