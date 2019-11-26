@@ -1,10 +1,10 @@
-import gendiff from '../src';
-import path from 'path';
 import fs from 'fs';
+import gendiff from '../src';
 
-const getPathBefore = fileFormat => `${__dirname}/__fixtures__/before${fileFormat}`;
-const getPathAfter = fileFormat => `${__dirname}/__fixtures__/after${fileFormat}`;
-const getResultFile = fileName => fs.readFileSync(`${__dirname}/__fixtures__/${fileName}`, 'utf8');
+
+const getPathBefore = (fileFormat) => `${__dirname}/__fixtures__/before${fileFormat}`;
+const getPathAfter = (fileFormat) => `${__dirname}/__fixtures__/after${fileFormat}`;
+const getResultFile = (fileName) => fs.readFileSync(`${__dirname}/__fixtures__/${fileName}`, 'utf8');
 
 test.each`
 fileFormat 	| formatOut 	| fileName
