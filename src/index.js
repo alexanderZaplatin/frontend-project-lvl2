@@ -3,7 +3,7 @@ import fs from 'fs';
 import parse from './parsers';
 import render from './formatters/render';
 import astBuilder from './ast';
-import parserFormat from './formatters'
+import renderFormat from './formatters'
 
  export default (filePath1, filePath2, format) => {
     const d1 = fs.readFileSync(filePath1, 'utf8');
