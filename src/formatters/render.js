@@ -8,7 +8,7 @@ const sign = (action) => {
 		inside: ' ',
 		nothing: ' ',
 		updated: ' ',
-	}
+	};
 	return signs[action];
 };
 

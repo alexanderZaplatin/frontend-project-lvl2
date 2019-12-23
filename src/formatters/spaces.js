@@ -1,4 +1,4 @@
-const repeat = num => ' '.repeat(num);
+const repeat = (num) => ' '.repeat(num);
 const space = (num) => {
 	if (num === 1) {
 		return repeat(4);

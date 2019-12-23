@@ -10,37 +10,36 @@ const astBuild = (fileBefore, fileAfter) => {
 				key,
 				action: 'inside',
 				children: astBuild(fileBefore[key], fileAfter[key]),
-			}
+			};
 		}
 		if (!_.has(key, fileAfter)) {
-			return{
+			return {
 				key,
 				valueAfter: fileBefore[key],
 				action: 'deleted',
-			}
+			};
 		}
 		if (!_.has(key, fileBefore)) {
 			return {
 				key,
 				valueAfter: fileAfter[key],
 				action: 'added',
-			}
+			};
 		}
 		if (fileBefore[key] === fileAfter[key]) {
 			return {
 				key,
 				valueAfter: fileAfter[key],
 				action: 'nothing',
-			}
+			};
 		}
 		return {
 			key,
 			valueBefore: fileBefore[key],
 			valueAfter: fileAfter[key],
 			action: 'updated',
-		}
+		};
 	});
 	return res;
 };
-
 export default astBuild;
