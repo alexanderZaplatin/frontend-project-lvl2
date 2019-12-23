@@ -13,7 +13,7 @@ import parserFormat from './formatters'
     const data1 = parse(path.extname(filePath1), d1);
     const data2 = parse(path.extname(filePath2), d2);
 
-    const ast = astBuilder(data1, data2);
+    const ast = astBuild(data1, data2);
 
-    return parserFormat(ast ,format);
+    return renderFormat(ast ,format);
  };
