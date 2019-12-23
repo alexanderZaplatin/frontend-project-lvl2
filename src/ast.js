@@ -9,7 +9,7 @@ const astBuild = (fileBefore, fileAfter) => {
 			return {
 				key,
 				action: 'inside',
-				children: astBuilder(fileBefore[key], fileAfter[key]),
+				children: astBuild(fileBefore[key], fileAfter[key]),
 			}
 		}
 		if (!_.has(key, fileAfter)) {
