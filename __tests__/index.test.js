@@ -12,10 +12,10 @@ ${'.ini'} 	| ${'plain'} 	| ${'plainResult.txt'}
 ${'.json'} 	| ${'nested'} | ${'nestedResult.txt'}
 ${'.yml'} 	| ${'json'} 	| ${'jsonResult.txt'}
 `('gendiff', ({ fileFormat, formatOut, fileName }) => {
-	const olD = getPathBefore(fileFormat);
-	const neW = getPathAfter(fileFormat);
+	const beforeData = getPathBefore(fileFormat);
+	const afterData = getPathAfter(fileFormat);
 
-	const receiveValue = gendiff(olD, neW, formatOut);
+	const receiveValue = gendiff(beforeData, afterData, formatOut);
 	const expectedValue = getResultFile(fileName);
 
 	expect(receiveValue).toBe(expectedValue);
