@@ -11,12 +11,12 @@ fileFormat 	| formatOut 	| expectedFixture
 ${'.ini'} 	| ${'plain'} 	| ${'plainResult.txt'}
 ${'.json'} 	| ${'nested'} | ${'nestedResult.txt'}
 ${'.yml'} 	| ${'json'} 	| ${'jsonResult.txt'}
-`('gendiff', ({ fileFormat, formatOut, fileName }) => {
+`('gendiff', ({ fileFormat, formatOut, expectedFixture }) => {
 	const beforeData = getPathBefore(fileFormat);
 	const afterData = getPathAfter(fileFormat);
 
 	const receivedValue = gendiff(beforeData, afterData, formatOut);
 	const expectedValue = getResultFile(expectedFixture);
 
-	expect(receiveValue).toBe(expectedValue);
+	expect(receivedValue).toBe(expectedValue);
 });
