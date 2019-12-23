@@ -1,7 +1,7 @@
 import _ from 'lodash/fp';
 
 
-const astBuilder = (fileBefore, fileAfter) => {
+const astBuild = (fileBefore, fileAfter) => {
 	const values = _.union(Object.keys(fileBefore), Object.keys(fileAfter));
 	values.sort();
 	const res = values.map((key) => {
@@ -43,4 +43,4 @@ const astBuilder = (fileBefore, fileAfter) => {
 	return res;
 };
 
-export default astBuilder;
+export default astBuild;

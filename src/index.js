@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import parse from './parsers';
 import render from './formatters/render';
-import astBuilder from './ast';
+import astBuild from './ast';
 import renderFormat from './formatters'
 
  export default (filePath1, filePath2, format) => {
