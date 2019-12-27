@@ -9,6 +9,6 @@ const parser = {
 };
 
 export default (type, data) => {
-	const parseData = parser[data];
-	return parseData(type);
+	const parseData = parser[type];
+	return parseData(data);
 };
