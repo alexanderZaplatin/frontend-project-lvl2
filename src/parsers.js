@@ -8,4 +8,7 @@ const parser = {
 
 };
 
-export default (type, data) => parser[type](data);
+export default (type, data) => {
+	const parseData = parser[data];
+	return parseData(type);
+};
