@@ -12,7 +12,7 @@ export default (filePath1, filePath2, format) => {
 	const extensionD2 = path.extname(filePath2);
 
 	const fileTypeD1 = extensionD1.slice(1);
-	const fileTypeD2 = extensionD2.slice(2);
+	const fileTypeD2 = extensionD2.slice(1);
 
 	const data1 = parse(fileTypeD1, d1);
 	const data2 = parse(fileTypeD2, d2);
