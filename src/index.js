@@ -1,7 +1,7 @@
 import path from 'path';
 import fs from 'fs';
 import parse from './parsers';
-import astBuild from './ast';
+import buildAst from './builderAst';
 import renderFormat from './formatters';
 
 export default (filePath1, filePath2, format) => {
@@ -17,7 +17,7 @@ export default (filePath1, filePath2, format) => {
   const data1 = parse(fileTypeD1, d1);
   const data2 = parse(fileTypeD2, d2);
 
-  const ast = astBuild(data1, data2);
+  const ast = buildAst(data1, data2);
 
   return renderFormat(ast, format);
 };

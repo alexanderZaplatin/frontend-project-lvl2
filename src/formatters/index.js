@@ -1,14 +1,14 @@
-import plainRender from './plain';
-import jsonRender from './jsonRender';
-import render from './render';
+import renderPlain from './renderPlain';
+import renderJson from './renderJson';
+import renderTree from './renderTree';
 
 export default (ast, format) => {
   switch (format) {
     case 'plain':
-      return plainRender(ast);
+      return renderPlain(ast);
     case 'json':
-      return jsonRender(ast);
+      return renderJson(ast);
     default:
-      return render(ast);
+      return renderTree(ast);
   }
 };

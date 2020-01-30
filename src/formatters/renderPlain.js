@@ -2,15 +2,15 @@ import _ from 'lodash/fp';
 
 const getValue = (value) => (_.isObject(value) ? '[complex value]' : value);
 
-const plainRender = (ast) => {
+const renderPlain = (ast) => {
   const iter = (data, acc = '') => {
-    const derivation = data.filter(({ action }) => action !== 'nothing')
+    const derivation = data.filter(({ type }) => type !== 'unchanged')
       .map(({
-        key, action, valueBefore, valueAfter, children,
+        key, type, valueBefore, valueAfter, children,
       }) => {
         const newAcc = !acc ? `${key}` : `${acc}.${key}`;
-        switch (action) {
-          case 'inside': {
+        switch (type) {
+          case 'nested': {
             return iter(children, newAcc);
           }
           case 'added': {
@@ -31,4 +31,4 @@ const plainRender = (ast) => {
   return iter(ast);
 };
 
-export default plainRender;
+export default renderPlain;
