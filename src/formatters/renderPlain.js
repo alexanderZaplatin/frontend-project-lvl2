@@ -23,7 +23,7 @@ const renderPlain = (ast) => {
             return `Property ${newAcc} was updated. From ${getValue(valueBefore)} to ${getValue(valueAfter)}.`;
           }
           default:
-            throw new Error('Ooops...unexpected type of node');
+            throw new Error(`Ooops...unexpected type ${type} of node`);
         }
       });
     return derivation.join('\n');

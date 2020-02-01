@@ -9,7 +9,7 @@ const stringify = (value, depth) => {
   const untab = makeIndent(depth - 1);
   const tab = makeIndent(depth);
   const str = Object.keys(value).map((key) => `${tab}  ${key}: ${value[key]}`);
-  const result = [str, `${untab}}`].join('\n');
+  const result = `${str}\n${untab}}`;
   return `{\n${result}`;
 };
 
